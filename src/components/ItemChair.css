@@ -1,0 +1,8 @@
+.btn-click {
+  width: 45px;
+  height: 40px;
+  transition: 0.3s;
+}
+.btn-click:hover {
+  transition: 0.3s;
+}

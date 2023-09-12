@@ -1,0 +1,8 @@
+:root {
+  --font-color-title: #fcc00b;
+}
+
+header h1 {
+  font-weight: 800;
+  color: var(--font-color-title);
+}
