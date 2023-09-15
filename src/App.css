@@ -4,18 +4,22 @@
   --text-black: #000;
 }
 
-.col-9,
-.col-3,
-.row {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  z-index: 1;
-}
-
 .layout {
   color: var(--font-color-title);
+  position: relative;
+}
+
+.layout::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url(./components/image/bgmovie.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.2);
 }
 
 .layout header {
@@ -29,23 +33,98 @@
   color: var(--font-color-title);
 }
 
-.bg-img {
-  background-image: url(./components/image/bgmovie.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 900px;
+.bookingMovie {
+  font-family: "fontGame";
 }
-.overlay {
+.ghe-header {
+  width: 31px;
+  height: 33px;
+  font-size: 12px;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+
+.ghe {
+  border: 3px solid orange;
+  /* width: 45px; */
+  width: 31px;
+  height: 33px;
+  font-size: 12px;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ghe.reserved {
+  background-color: orange;
+}
+
+.ghe.selected {
+  background-color: green;
+  border: 3px solid green;
+}
+
+.rowNumber {
+  /* font-size: 25px; */
+  /* width: 31px;
+  height: 35px; */
+  /* background: none;
+  border: none; */
+  /* margin-left: 2%;
+  margin-bottom: 1%; */
+  font-size: 16px;
+  color: yellow;
+}
+
+.firstChar {
+  color: yellow;
+  /* margin-right: 15px; */
+  width: 31px;
+  height: 33px;
+  /* background: #fff; */
+  position: relative;
+}
+
+.firstChar span {
+  font-size: 20px;
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.screen {
+  border-bottom: 50px solid rgb(255, 159, 95);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 100;
+  width: 80%;
+  filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+  font-size: 25px;
+  color: #fff;
+}
+
+.gheDuocChon {
+  border: 3px solid orange;
+
+  background: orange;
+  color: #000;
+
+  cursor: no-drop !important;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+
+.gheDangChon {
+  background: rgb(109, 238, 109);
+  border: 3px solid rgb(109, 238, 109);
+  color: #000;
+
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
 }

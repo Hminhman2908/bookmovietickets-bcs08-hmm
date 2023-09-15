@@ -7,7 +7,7 @@ export class CartChair extends Component {
   render() {
     return (
       <div className="col-3 mt-5">
-        <h5 className="text-center">Danh sách ghế bạn chọn</h5>
+        <h5>Danh sách ghế bạn chọn</h5>
         <Row align={"bottom"} className="mb-2 mt-5">
           <div className="ghe reserved mr-3"></div>
           <Title level={5} className="text-white">

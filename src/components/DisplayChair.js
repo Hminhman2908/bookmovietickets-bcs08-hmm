@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Col, Row } from "antd";
 import { MAX_NUMBER_SEATS } from "./data";
-import "./ItemChair.css";
+import "../App.css";
 
 export class DisplayChair extends Component {
   renderFirstRow = () => {
@@ -72,7 +72,7 @@ export class DisplayChair extends Component {
     return (
       <div className="col-9 mt-5">
         <h5 className="text-center">Màn hình</h5>
-        <div className="container p-5">
+        <div className="container">
           <Row justify={"center"} className="mb-3">
             {this.renderFirstRow()}
           </Row>
