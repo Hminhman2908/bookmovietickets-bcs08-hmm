@@ -187,3 +187,5 @@ export let chairArr = [
     ],
   },
 ];
+
+export const MAX_NUMBER_SEATS = 12;
