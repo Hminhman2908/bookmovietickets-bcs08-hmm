@@ -26,10 +26,7 @@ export class DisplayChair extends Component {
     });
   };
   renderSeats = (row) => {
-    let danhSachGhe = [
-      { soGhe: row.hang }, // Tên hàng (A, B, C,... J), soGhe dùng để tạo component key (bên dưới)
-      ...row.danhSachGhe,
-    ];
+    let danhSachGhe = [{ soGhe: row.hang }, ...row.danhSachGhe];
     return danhSachGhe.map((seat, i) => {
       if (i < 1) {
         return (
