@@ -1,8 +1,51 @@
 :root {
   --font-color-title: #fcc00b;
+  --text-white: #fff;
+  --text-black: #000;
 }
 
-header h1 {
+.col-9,
+.col-3,
+.row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  z-index: 1;
+}
+
+.layout {
+  color: var(--font-color-title);
+}
+
+.layout header {
+  position: relative;
+  z-index: 1;
+}
+
+.layout header h1 {
+  margin-top: 20px;
   font-weight: 800;
   color: var(--font-color-title);
+}
+
+.bg-img {
+  background-image: url(./components/image/bgmovie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 900px;
+}
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

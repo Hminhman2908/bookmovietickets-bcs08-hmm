@@ -4,7 +4,7 @@ import DisplayChair from "./components/DisplayChair";
 
 function App() {
   return (
-    <div>
+    <div className="layout">
       <header>
         <h1 className="text-center">ĐẶT VÉ XEM PHIM CYBERLEARN.VN</h1>
       </header>
@@ -14,6 +14,9 @@ function App() {
           <CartChair />
         </div>
       </section>
+      <div className="bg-img">
+        <div className="overlay"></div>
+      </div>
     </div>
   );
 }

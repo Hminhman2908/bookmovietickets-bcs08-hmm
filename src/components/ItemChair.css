@@ -1,8 +1,23 @@
-.btn-click {
-  width: 45px;
-  height: 40px;
-  transition: 0.3s;
+table {
+  border: none !important;
 }
-.btn-click:hover {
-  transition: 0.3s;
+td {
+  border: none !important;
+}
+
+.btn-book {
+  color: white;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid yellow;
+}
+
+.btn-book:hover {
+  background: green;
+  color: white;
+  transition: 0.5s;
 }

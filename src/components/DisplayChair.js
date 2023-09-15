@@ -10,10 +10,32 @@ export class DisplayChair extends Component {
   };
   render() {
     return (
-      <div className="col-9">
+      <div className="col-9 mt-5">
         <h5 className="text-center">Màn hình</h5>
-        <div className="container">
-          <table className="text-center ml-5">{this.renderListChair()}</table>
+        <div className="container p-5">
+          <table
+            className="table table-bordered text-center"
+            style={{ color: "#fcc00b", fontWeight: 400 }}
+          >
+            <thead>
+              <tr>
+                <td>#</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+              </tr>
+            </thead>
+            <tbody>{this.renderListChair()}</tbody>
+          </table>
         </div>
       </div>
     );
