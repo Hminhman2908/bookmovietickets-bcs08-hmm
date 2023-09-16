@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Col, Row } from "antd";
+import { Col, Row, Typography } from "antd";
 import { MAX_NUMBER_SEATS } from "./data";
 import "../App.css";
+let { Title } = Typography;
 
 export class DisplayChair extends Component {
   renderFirstRow = () => {
@@ -43,9 +44,9 @@ export class DisplayChair extends Component {
           <Col span={1} key={seat.soGhe}>
             <div
               className={`ghe text-center ${isReserved} ${isSelected}`}
-              // onClick={() => {
-              //   this.props.handleSelect(seat);
-              // }}
+              onClick={() => {
+                this.props.handleSelect(seat);
+              }}
             >
               <span className="rowNumber">{i}</span>
             </div>
@@ -67,23 +68,38 @@ export class DisplayChair extends Component {
   };
   render() {
     return (
-      <div className="col-9 mt-5">
-        <h5 className="text-center">Màn hình</h5>
-        <div className="container">
-          <Row justify={"center"} className="mb-3">
-            {this.renderFirstRow()}
-          </Row>
-          <Row>{this.renderRows()}</Row>
-        </div>
+      <div className="text-center">
+        <Title type="warning" strong>
+          Đặt vé xem phim
+        </Title>
+        <Title level={4} className="text-white">
+          Màn hình
+        </Title>
+        <Row justify={"center"} className="mb-3">
+          {this.renderFirstRow()}
+        </Row>
+        <Row>{this.renderRows()}</Row>
       </div>
     );
   }
 }
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     chairArr: state.chairArr,
   };
 };
 
-export default connect(mapStateToProps)(DisplayChair);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleSelect: (seat) => {
+      let action = {
+        type: "SELECT",
+        payload: seat.soGhe,
+      };
+      dispatch(action);
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayChair);

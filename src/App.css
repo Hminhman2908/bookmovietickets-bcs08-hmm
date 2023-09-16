@@ -1,40 +1,5 @@
-:root {
-  --font-color-title: #fcc00b;
-  --text-white: #fff;
-  --text-black: #000;
-}
-
-.layout {
-  color: var(--font-color-title);
-  position: relative;
-}
-
-.layout::before {
-  content: "";
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: url(./components/image/bgmovie.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(0.2);
-}
-
-.layout header {
-  position: relative;
-  z-index: 1;
-}
-
-.layout header h1 {
-  margin-top: 20px;
-  font-weight: 800;
-  color: var(--font-color-title);
-}
-
 .bookingMovie {
-  font-family: "fontGame";
+  font-family: Arial, Helvetica, sans-serif;
 }
 .ghe-header {
   width: 31px;
@@ -127,4 +92,31 @@
   border-radius: 5px;
   width: 45px;
   height: 35px;
+}
+
+.theater {
+  position: relative;
+}
+
+.theater::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url(./components/image/bgmovie.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.2);
+}
+
+.ant-table,
+.ant-table-cell {
+  /* background: transparent !important; */
+}
+
+#table-seat * {
+  background-color: #0000008b !important;
+  color: white;
 }

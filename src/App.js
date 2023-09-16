@@ -1,22 +1,20 @@
+import { Col, Row } from "antd";
 import "./App.css";
-import { CartChair } from "./components/CartChair";
+import CartChair from "./components/CartChair";
 import DisplayChair from "./components/DisplayChair";
 
 function App() {
   return (
-    <div className="layout">
-      <header>
-        <h1 className="text-center">ĐẶT VÉ XEM PHIM CYBERLEARN.VN</h1>
-      </header>
-      <section>
-        <div className="row">
+    <div className="theater mt-5">
+      <Row justify={"center"}>
+        <Col xl={15} sm={24}>
           <DisplayChair />
+        </Col>
+        <Col xl={5} sm={20}>
           <CartChair />
-        </div>
-      </section>
-      <div className="bg-img">
-        <div className="overlay"></div>
-      </div>
+        </Col>
+        <Col xl={4} sm={0}></Col>
+      </Row>
     </div>
   );
 }
